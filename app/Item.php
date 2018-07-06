@@ -17,4 +17,10 @@ class Item extends Model
     {
         return $this->users()->where('type', 'want');
     }
+    
+    // have_users() を作成し、中身は単に type = 'have' なものを絞り込んでいる
+    public function have_users()
+    {
+        return $this->users()->where('type', 'have');
+    }
 }
